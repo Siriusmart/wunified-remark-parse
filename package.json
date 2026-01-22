@@ -1,0 +1,30 @@
+{
+    "name": "wunified-remark-parse",
+    "version": "0.0.1",
+    "description": "UnifiedJS::RemarkParse for Webpan",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/siriusmart/wunified-remark-parse.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "AGPL-3.0-only",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/siriusmart/wunified-remark-parse/issues"
+    },
+    "homepage": "https://github.com/siriusmart/wunified-remark-parse#readme",
+    "devDependencies": {
+        "@types/node": "^24.4.0"
+    },
+    "dependencies": {
+        "remark-parse": "^11.0.0",
+        "unified": "^11.0.5",
+        "wp-unified": "^0.0.2"
+    }
+}
