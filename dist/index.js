@@ -8,15 +8,9 @@ const remark_parse_1 = __importDefault(require("remark-parse"));
 class WRemarkParse extends wp_unified_1.WUnifiedPlugin {
     apply(processor, options) {
         if (options === undefined)
-            processor = processor.use(remark_parse_1.default);
+            return processor.use(remark_parse_1.default);
         else
-            processor = processor.use(remark_parse_1.default, options);
-        if (options.snapshot === true)
-            /// tree is an hast.Root
-            processor.apply(() => (tree) => {
-                this.result.ast = structuredClone(tree);
-            });
-        return processor;
+            return processor.use(remark_parse_1.default, options);
     }
 }
 exports.default = WRemarkParse;
