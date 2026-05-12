@@ -1,11 +1,12 @@
 {
     "name": "wunified-remark-parse",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "UnifiedJS::RemarkParse for Webpan",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsc"
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
     },
     "repository": {
         "type": "git",
@@ -25,6 +26,6 @@
     "dependencies": {
         "remark-parse": "^11.0.0",
         "unified": "^11.0.5",
-        "wp-unified": "^0.0.2"
+        "wp-unified": "^0.0.6"
     }
 }

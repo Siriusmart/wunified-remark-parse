@@ -3,9 +3,19 @@ import remarkParse from "remark-parse"
 
 export default class WRemarkParse extends WUnifiedPlugin {
     apply(processor: UntypedProcessor, options: any): UntypedProcessor {
+        let res: UntypedProcessor;
+
         if (options === undefined)
-            return processor.use(remarkParse)
+            res = processor.use(remarkParse)
         else
-            return processor.use(remarkParse, options)
+            res = processor.use(remarkParse, options)
+
+        if (options.snapshot === true)
+            /// tree is an hast.Root
+            processor.apply(() => (tree: any) => {
+                this.result.ast = structuredClone(tree)
+            })
+
+        return res;
     }
 }
